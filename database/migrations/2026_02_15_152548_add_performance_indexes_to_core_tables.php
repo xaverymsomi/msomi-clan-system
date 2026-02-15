@@ -12,26 +12,38 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->index('region');
-            $table->index('district');
-            $table->index('village');
-            $table->index('membership_status');
+            $sm = Schema::getConnection()->getDoctrineSchemaManager();
+            $indexes = $sm->listTableIndexes('members');
+
+            if (!array_key_exists('members_region_index', $indexes)) $table->index('region');
+            if (!array_key_exists('members_district_index', $indexes)) $table->index('district');
+            if (!array_key_exists('members_village_index', $indexes)) $table->index('village');
+            if (!array_key_exists('members_membership_status_index', $indexes)) $table->index('membership_status');
         });
 
         Schema::table('contributions', function (Blueprint $table) {
-            $table->index('status');
-            $table->index('payment_method');
-            $table->index('member_id');
+            $sm = Schema::getConnection()->getDoctrineSchemaManager();
+            $indexes = $sm->listTableIndexes('contributions');
+
+            if (!array_key_exists('contributions_status_index', $indexes)) $table->index('status');
+            if (!array_key_exists('contributions_payment_method_index', $indexes)) $table->index('payment_method');
+            if (!array_key_exists('contributions_member_id_index', $indexes)) $table->index('member_id');
         });
 
         Schema::table('announcements', function (Blueprint $table) {
-            $table->index('category');
-            $table->index('status');
+            $sm = Schema::getConnection()->getDoctrineSchemaManager();
+            $indexes = $sm->listTableIndexes('announcements');
+
+            if (!array_key_exists('announcements_category_index', $indexes)) $table->index('category');
+            // 'status' column does not exist in announcements table
         });
 
         Schema::table('customs_traditions', function (Blueprint $table) {
-            $table->index('category_id');
-            $table->index('status');
+            $sm = Schema::getConnection()->getDoctrineSchemaManager();
+            $indexes = $sm->listTableIndexes('customs_traditions');
+
+            if (!array_key_exists('customs_traditions_category_id_index', $indexes)) $table->index('category_id');
+            if (!array_key_exists('customs_traditions_status_index', $indexes)) $table->index('status');
         });
     }
 
