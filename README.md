@@ -1,59 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Msomi Clan Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A premium, modern clan management platform designed for the Msomi Clan to preserve heritage, manage membership, and facilitate community contributions.
 
-## About Laravel
+![Msomi Clan Logo](/public/images/login-bg.jpg)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🌟 Key Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🏛️ Cultural Heritage
+- **Interactive Family Tree**: Zoomable, interactive visualization of clan lineage using D3.js.
+- **Oral History Vault**: Progressive voice recording system for elders to preserve oral traditions directly from mobile devices.
+- **Rich Media Gallery**: Support for high-quality images and video archives of clan events and traditions.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 💳 Financial Management
+- **Automated Payment Gateway**: Integrated support for **M-Pesa** and **Flutterwave**.
+- **Contribution Tracking**: Real-time tracking of dues, fees, and voluntary contributions.
+- **Advanced Reporting**: Generate professional PDF receipts and Excel financial exports.
 
-## Learning Laravel
+### 🌐 Modern Ecosystem
+- **Progressive Web App (PWA)**: Installable on Android and iOS home screens for a native app-like experience.
+- **Global Clan Map**: Interactive geospatial distribution of clan members across Tanzania.
+- **Professional Directory**: Searchable expertise network to connect clan members by skills and profession.
+- **Global Search**: High-performance search across members, traditions, and financial records.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 🔒 Security & Identity
+- **Audit Logs**: Comprehensive activity tracking for all system changes.
+- **Membership ID Cards**: Generation of branded, secure PDF identification cards for members.
+- **Role-Based Access Control**: Strict permissions for Admins, Elders, and Members.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Quick Setup
 
-## Laravel Sponsors
+### Prerequisites
+- PHP 8.2+
+- Composer
+- Node.js & NPM
+- MySQL 8.0+
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/msomi-clan-system.git
+   ```
+2. Install dependencies:
+   ```bash
+   composer install
+   npm install && npm run build
+   ```
+3. Configuration:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+4. Database & Seeding:
+   ```bash
+   php artisan migrate --seed
+   php artisan db:seed --class=PaymentGatewaySeeder
+   ```
+5. Start Server:
+   ```bash
+   php artisan serve
+   ```
 
-### Premium Partners
+## 📱 Mobile Installation (PWA)
+1. Access the site via **HTTPS**.
+2. **Android**: Tap "Add to Home Screen" prompt or select "Install App" from the Chrome menu.
+3. **iOS**: Tap the Share button in Safari and select "Add to Home Screen".
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛡️ Security
+If you discover a security vulnerability, please contact the system administrator.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📄 License
+This system is custom-built for the Msomi Clan.
