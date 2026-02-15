@@ -12,38 +12,34 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('members', function (Blueprint $table) {
-            $sm = Schema::getConnection()->getDoctrineSchemaManager();
-            $indexes = $sm->listTableIndexes('members');
+            $indexes = collect(Schema::getIndexes('members'))->pluck('name')->toArray();
 
-            if (!array_key_exists('members_region_index', $indexes)) $table->index('region');
-            if (!array_key_exists('members_district_index', $indexes)) $table->index('district');
-            if (!array_key_exists('members_village_index', $indexes)) $table->index('village');
-            if (!array_key_exists('members_membership_status_index', $indexes)) $table->index('membership_status');
+            if (!in_array('members_region_index', $indexes)) $table->index('region');
+            if (!in_array('members_district_index', $indexes)) $table->index('district');
+            if (!in_array('members_village_index', $indexes)) $table->index('village');
+            if (!in_array('members_membership_status_index', $indexes)) $table->index('membership_status');
         });
 
         Schema::table('contributions', function (Blueprint $table) {
-            $sm = Schema::getConnection()->getDoctrineSchemaManager();
-            $indexes = $sm->listTableIndexes('contributions');
+            $indexes = collect(Schema::getIndexes('contributions'))->pluck('name')->toArray();
 
-            if (!array_key_exists('contributions_status_index', $indexes)) $table->index('status');
-            if (!array_key_exists('contributions_payment_method_index', $indexes)) $table->index('payment_method');
-            if (!array_key_exists('contributions_member_id_index', $indexes)) $table->index('member_id');
+            if (!in_array('contributions_status_index', $indexes)) $table->index('status');
+            if (!in_array('contributions_payment_method_index', $indexes)) $table->index('payment_method');
+            if (!in_array('contributions_member_id_index', $indexes)) $table->index('member_id');
         });
 
         Schema::table('announcements', function (Blueprint $table) {
-            $sm = Schema::getConnection()->getDoctrineSchemaManager();
-            $indexes = $sm->listTableIndexes('announcements');
+            $indexes = collect(Schema::getIndexes('announcements'))->pluck('name')->toArray();
 
-            if (!array_key_exists('announcements_category_index', $indexes)) $table->index('category');
+            if (!in_array('announcements_category_index', $indexes)) $table->index('category');
             // 'status' column does not exist in announcements table
         });
 
         Schema::table('customs_traditions', function (Blueprint $table) {
-            $sm = Schema::getConnection()->getDoctrineSchemaManager();
-            $indexes = $sm->listTableIndexes('customs_traditions');
+            $indexes = collect(Schema::getIndexes('customs_traditions'))->pluck('name')->toArray();
 
-            if (!array_key_exists('customs_traditions_category_id_index', $indexes)) $table->index('category_id');
-            if (!array_key_exists('customs_traditions_status_index', $indexes)) $table->index('status');
+            if (!in_array('customs_traditions_category_id_index', $indexes)) $table->index('category_id');
+            if (!in_array('customs_traditions_status_index', $indexes)) $table->index('status');
         });
     }
 
