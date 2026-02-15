@@ -1,0 +1,20 @@
+{
+    "Name": "Jina",
+    "Email": "Barua Pepe",
+    "Password": "Neno la Siri",
+    "Confirm Password": "Thibitisha Neno la Siri",
+    "Phone": "Namba ya Simu",
+    "Already registered?": "Umesajiliwa tayari?",
+    "Register": "Jisajili",
+    "Log in": "Ingia",
+    "Remember me": "Nikumbuke",
+    "Forgot your password?": "Umesahau neno la siri?",
+    "Reset Password": "Weka Upya Neno la Siri",
+    "Verify Your Email Address": "Thibitisha Anwani Yako ya Barua Pepe",
+    "Before proceeding, please check your email for a verification link.": "Kabla ya kuendelea, tafadhali angalia barua pepe yako kwa kiungo cha uthibitishaji.",
+    "If you did not receive the email": "Kama hukupokea barua pepe",
+    "click here to request another": "bonyeza hapa kuomba nyingine",
+    "Log Out": "Toka",
+    "Save": "Hifadhi",
+    "Cancel": "Ghairi"
+}

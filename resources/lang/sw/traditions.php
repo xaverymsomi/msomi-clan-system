@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'traditions' => 'Mila na Desturi',
+    'tradition' => 'Mila',
+    'customs_and_traditions' => 'Mila na Desturi',
+    /*
+    |--------------------------------------------------------------------------
+    | Traditions Module (Swahili)
+    |--------------------------------------------------------------------------
+    */
+
+    'traditions' => 'Mila na Desturi',
+    'tradition' => 'Desturi',
+    'customs' => 'Mila',
+    'view_traditions' => 'Tazama Mila na Desturi',
+    'add_tradition' => 'Ongeza Desturi',
+    'edit_tradition' => 'Hariri Desturi',
+    'delete_tradition' => 'Futa Desturi',
+    'tradition_details' => 'Maelezo ya Desturi',
+    'tradition_category' => 'Aina ya Desturi',
+    'tradition_categories' => 'Aina za Desturi',
+    'featured_image' => 'Picha Kuu',
+    'media_gallery' => 'Mkusanyiko wa Picha',
+    'add_media' => 'Ongeza Picha/Video',
+    'views' => 'Maoni',
+    'published' => 'Imechapishwa',
+    'draft' => 'Rasimu',
+    'publish' => 'Chapisha',
+    'unpublish' => 'Sitisha kuchapisha',
+    'created_by' => 'Imeundwa na',
+    'updated_by' => 'Imesasishwa na',
+    'no_traditions' => 'Hakuna mila au desturi zilizopo',
+    'title_sw' => 'Kichwa (Kiswahili)',
+    'title_en' => 'Kichwa (Kiingereza)',
+    'description_sw' => 'Maelezo (Kiswahili)',
+    'description_en' => 'Maelezo (Kiingereza)',
+    'content_sw' => 'Maudhui (Kiswahili)',
+    'content_en' => 'Maudhui (Kiingereza)',
+    'tradition_saved' => 'Desturi imehifadhiwa kwa mafanikio',
+    'tradition_deleted' => 'Desturi imefutwa kwa mafanikio',
+    'explore_our_heritage' => 'Gundua Urithi Wetu',
+    'browse_by_category' => 'Angalia kwa Aina',
+    'add_new_tradition' => 'Ongeza Desturi Mpya',
+    'create_tradition' => 'Unda Desturi',
+    'edit_tradition' => 'Hariri Desturi',
+    'search_placeholder' => 'Tafuta mila na desturi...',
+    'items' => 'machapisho',
+    'read_more' => 'Soma Zaidi',
+    'back_to_list' => 'Rudi kwenye Orodha',
+    'about_author' => 'Kuhusu Mwandishi',
+    'related_topics' => 'Mada Zinazohusiana',
+    'no_traditions_found' => 'Hakuna mila au desturi zilizopo',
+    'try_adjusting_filters' => 'Jaribu kubadilisha utafutaji wako',
+    'all_categories' => 'Aina Zote',
+    'category' => 'Aina',
+];
